@@ -1,12 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-interface LinkProps {
-  active: boolean,
-  children?: string,
-  onClickFunc: Function
-}
-
 const Link = ({ active, children, onClickFunc}: LinkProps) => {
   if (active) {
     return <span>{children}</span>

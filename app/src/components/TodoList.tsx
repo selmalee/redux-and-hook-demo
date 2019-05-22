@@ -2,11 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Todo from './Todo'
 
-interface TodoListProps {
-  todos: any[],
-  toggleTodo: Function
-}
-
 const TodoList = ({ todos, toggleTodo }: TodoListProps) => (
   <ul>
     {todos.map((todo, index) => (

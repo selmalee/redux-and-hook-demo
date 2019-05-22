@@ -2,12 +2,6 @@ import { connect } from 'react-redux'
 import { setVisibilityFilter } from '../actions'
 import Link from '../components/Link'
 
-interface LinkProps {
-  active: boolean,
-  children?: string,
-  onClickFunc: Function
-}
-
 // 指定如何把当前 Redux store state 映射到展示组件的 props 中
 const mapStateToProps = (state:any, ownProps:any) => {
   return {

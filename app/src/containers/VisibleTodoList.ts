@@ -2,11 +2,6 @@ import { connect } from 'react-redux'
 import { toggleTodo } from '../actions'
 import TodoList from '../components/TodoList'
 
-interface TodoListProps {
-  todos: any[],
-  toggleTodo: Function
-}
-
 const getVisibleTodos = (todos:any[], filter:string) => {
   switch (filter) {
     case 'SHOW_COMPLETED':
