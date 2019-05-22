@@ -4,19 +4,19 @@ import Todo from './Todo'
 
 interface TodoListProps {
   todos: any[],
-  onTodoClick: Function
+  toggleTodo: Function
 }
 
-const TodoList = ({ todos, onTodoClick }: TodoListProps) => (
+const TodoList = ({ todos, toggleTodo }: TodoListProps) => (
   <ul>
     {todos.map((todo, index) => (
-      <Todo key={index} {...todo} onClickFunc={() => onTodoClick(index)} />
+      <Todo key={index} {...todo} onClickFunc={() => toggleTodo(index)} />
     ))}
   </ul>
 )
 
 // interface也能做到声明参数类型作用
-TodoList.PropTypes = {
+TodoList.propTypes = {
   todos: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,
@@ -24,7 +24,7 @@ TodoList.PropTypes = {
       text: PropTypes.string.isRequired
     })
   ).isRequired,
-  onTodoClick: PropTypes.func.isRequired
+  toggleTodo: PropTypes.func.isRequired
 }
 
 export default TodoList

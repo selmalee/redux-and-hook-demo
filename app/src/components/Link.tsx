@@ -1,32 +1,31 @@
-import React, { ReactNode } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 
 interface LinkProps {
   active: boolean,
-  children: ReactNode,
-  onClick: Function
+  children?: string,
+  onClickFunc: Function
 }
 
-const Link = ({ active, children, onClick}: LinkProps) => {
+const Link = ({ active, children, onClickFunc}: LinkProps) => {
   if (active) {
     return <span>{children}</span>
   }
   return (
-    <a
-      href=""
+    <span
       onClick={e => {
         e.preventDefault()
-        onClick()
+        onClickFunc()
       }}
-    >{children}</a>
+    >{children}</span>
   )
 }
 
 // interface也能做到声明参数类型作用
-Link.PropTypes = {
+Link.propTypes = {
   active: PropTypes.bool.isRequired,
   children: PropTypes.node.isRequired,
-  onClick: PropTypes.func.isRequired
+  onClickFunc: PropTypes.func.isRequired
 }
 
 export default Link

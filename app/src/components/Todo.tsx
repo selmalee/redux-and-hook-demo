@@ -19,8 +19,8 @@ const Todo = ({ onClickFunc, completed, text}: TodoProps) => (
 )
 
 // interface也能做到声明参数类型作用
-Todo.PropTypes = {
-  onClick: PropTypes.func.isRequired,
+Todo.propTypes = {
+  onClickFunc: PropTypes.func.isRequired,
   completed: PropTypes.bool.isRequired,
   text: PropTypes.string.isRequired
 }
