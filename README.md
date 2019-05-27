@@ -1,2 +1,2 @@
  - app/ 下为 reac-redux demo（redux官网上的TodoList demo）
- - app-hook/ 下为 使用react-model + react hooks写的todolist demo（待更新）
+ - app-hook/ 下为 使用react-model + react hooks写的todolist demo
